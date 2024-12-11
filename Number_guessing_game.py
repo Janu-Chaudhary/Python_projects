@@ -13,34 +13,36 @@ def easy_game():
         print(f"Chance left: {3-chance}")
         guess_num=int(input("Guess the number:  "))
         if guess_num==number:
-            if chance==1:
-                print("")
-            elif chance==2:
-                print("")
-            elif chance==3:
-                print("")
-           
-        elif guess_num>number:
-            print("")
-        elif guess_num<number:
-            print("")
-
+            if chance == 1:
+                print(f"Wow! You guessed it on your first try! The number was {number}. You're a genius!")
+            elif chance == 2:
+                print(f"Great job! You got it on your second try! The number was {number}. Well done!")
+            elif chance == 3:
+                print(f"Nice work! You figured it out on your third try! The number was {number}. Persistence pays off!")
+            return
+        elif guess_num > number:
+            print("Too high! Try a smaller number.")
+        else:
+            print("Too low! Try a larger number.")
+    print(f"Sorry, you've run out of chances! The correct number was {number}.")
 def meadium_game():
     number=random.randint(1,100)
     for chance in range (1,4):
         print(f"Chance left: {3-chance}")
         guess_num=int(input("Guess the number:  "))
-        if guess_num==number:
-            if chance==1:
-                print("")
-            elif chance==2:
-                print("")
-            elif chance==3:
-                print("")
-        elif guess_num>number:
-            print("")
-        elif guess_num<number:
-            print("")
+        if guess_num == number:
+            if chance == 1:
+                print(f"Fantastic! You nailed it on your first attempt! The number was {number}. You're amazing!")
+            elif chance == 2:
+                print(f"Awesome! You guessed it on your second try! The number was {number}. Great job!")
+            elif chance == 3:
+                print(f"Well done! You got it on your third attempt! The number was {number}. Keep it up!")
+            return
+        elif guess_num > number:
+            print("Oops! That's too high. Give it another shot.")
+        else:
+            print("Not quite! That's too low. Try again.")
+    print(f"Game over! The secret number was {number}.")
 
 def hard_game():
     number=random.randint(1,500)
@@ -48,16 +50,18 @@ def hard_game():
         print(f"Chance left: {3-chance}")
         guess_num=int(input("Guess the number:  "))
         if guess_num==number:
-            if chance==1:
-                print("")
-            elif chance==2:
-                print("")
-            elif chance==3:
-                print("")
-        elif guess_num>number:
-            print("")
-        elif guess_num<number:
-            print("")
+            if chance == 1:
+                print(f"Incredible! You guessed it right on your first try! The number was {number}. You're a legend!")
+            elif chance == 2:
+                print(f"Awesome job! You got it on your second attempt! The number was {number}. Well played!")
+            elif chance == 3:
+                print(f"You did it! It took you three tries, but you got there! The number was {number}. Nice effort!")
+            return
+        elif guess_num > number:
+            print("That's a bit too high. Lower your sights!")
+        else:
+            print("That's a bit too low. Aim higher!")
+    print(f"Alas, you've used all your chances! The correct answer was {number}.")
     
             
 
